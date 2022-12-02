@@ -144,3 +144,15 @@ person.getName();
 let test = new personX("Adam", "Małysz");
 test.getNameTest();
 
+//Callback
+function test3(a, callback) {
+    console.log("test3: ", a);
+    callback(a);
+    // test4(a);
+}
+
+function test4 (arg) {
+    console.log("test4 arg:", arg);
+}
+
+test3 (12, test4);
