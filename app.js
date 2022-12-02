@@ -112,3 +112,35 @@ function divide() {
         return;
     }
 }
+
+
+// OBIEKTY
+
+let person = {
+        firstName: "Janusz",
+        secondName: "Kowalski",
+
+        
+
+        getName: function (){
+            console.log(this.firstName + " " + this.secondName)
+        }
+};
+
+// Konstruktor
+function personX (firstName, secondName) {
+    this.firstName = firstName;
+    this.secondName = secondName;
+
+    this.getNameTest = function () {
+        console.log(this.firstName + " " + this.secondName)
+    };
+
+
+};
+
+person.getName();
+
+let test = new personX("Adam", "Małysz");
+test.getNameTest();
+
