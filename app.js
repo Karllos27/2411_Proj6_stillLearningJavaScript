@@ -23,24 +23,25 @@
 //     j++;
 // }
 
+function christmasTree(size) {
+    console.log("---------Choinka---------")
 
-console.log("---------Choinka---------")
+    let maxLevel = size;
+    let currentLvl = 1;
 
-let maxLevel = 3;
-let currentLvl = 1;
+    while(currentLvl <= maxLevel){
+        let spacesLvl = maxLevel-currentLvl;
+        let level = "";
+        while(spacesLvl > 0) {
+            level += " ";
+            spacesLvl--;
+        }
 
-while(currentLvl <= maxLevel){
-    let spacesLvl = maxLevel-currentLvl;
-    let level = "";
-    while(spacesLvl > 0) {
-        level += " ";
-        spacesLvl--;
+        level += "*";
+        for (let i = 1; i < currentLvl;i++) level += "**";
+
+        console.log(level);
+
+        currentLvl++;
     }
-
-    level += "*";
-    for (let i = 1; i < currentLvl;i++) level += "**";
-
-    console.log(level);
-
-    currentLvl++;
 }
