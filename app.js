@@ -23,10 +23,20 @@
 //     j++;
 // }
 
-function christmasTree(size) {
+function christmasTree() {
+    let maxLevel = document.getElementById("sizeOfTheTree").value;
+
+    if (maxLevel < 2) {
+        console.log("Podany rozmiar jest za mały");
+        return;
+    }
+    else if (maxLevel > 100) {
+        console.log("Podany rozmiar jest za duży");
+        return;
+    }
+
     console.log("---------Choinka---------")
 
-    let maxLevel = size;
     let currentLvl = 1;
 
     while(currentLvl <= maxLevel){
@@ -43,5 +53,62 @@ function christmasTree(size) {
         console.log(level);
 
         currentLvl++;
+    }
+}
+
+function addition() {
+    let a = parseInt(document.getElementById("addFirstNumber").value);
+    let b = parseInt(document.getElementById("addSecondNumber").value);
+    if (a && b) {
+        document.getElementById("additionResult").innerHTML = a+b;
+    }
+    else {
+        document.getElementById("additionResult").innerHTML = "There is no number";
+        console.error("Nie została podana liczba");
+        return;
+    }
+}
+
+function subtraction() {
+    let a = parseInt(document.getElementById("subFirstNumber").value);
+    let b = parseInt(document.getElementById("subSecondNumber").value);
+    if (a && b) {
+        document.getElementById("subtractionResult").innerHTML = a-b;
+    }
+    else {
+        document.getElementById("subtractionResult").innerHTML = "There is no number";
+        console.error("Nie została podana liczba");
+        return;
+    }
+}
+
+function multiply() {
+    let a = parseInt(document.getElementById("multiFirstNumber").value);
+    let b = parseInt(document.getElementById("multiSecondNumber").value);
+    if (a && b) {
+        document.getElementById("multiplicationResult").innerHTML = a*b;
+    }
+    else {
+        document.getElementById("multiplicationResult").innerHTML = "There is no number";
+        console.error("Nie została podana liczba");
+        return;
+    }
+}
+
+function divide() {
+    let a = parseInt(document.getElementById("divFirstNumber").value);
+    let b = parseInt(document.getElementById("divSecondNumber").value);
+    if (b == 0 ) {
+        console.error("Nie dzielimy przez 0");
+        document.getElementById("divisionResult").innerHTML = "Don't divide by 0";
+        return;
+    }
+    if (a && b) {
+        document.getElementById("divisionResult").innerHTML = a/b;
+    }
+    else {
+        document.getElementById("divisionResult").innerHTML = "There is no number";
+        console.error("Nie została podana liczba");
+        return;
     }
 }

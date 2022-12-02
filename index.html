@@ -9,6 +9,55 @@
 
 </head>
 <body>
+    <h1>JavaScript is FUN!!!</h1>
+    <h2>Make a christmas tree in the console:</h2>
+    <form>
+        <label for="sizeOfTheTree">Give us a size of tree:</label>
+        <input type="number" id="sizeOfTheTree" name="size_of_the_tree">
+        <button onclick="christmasTree();return false">Submit</button>
+    </form>
+    </br>
+
+    <h2>Add some numbers:</h2>
+    <form>
+        <input type="number" id="addFirstNumber" name="add_first_number"></input>
+        +
+        <input type="number" id="addSecondNumber" name="add_second_number"></input>
+        =
+        <div id="additionResult" class="result"></div>
+        <button onclick="addition();return false">Submit</button>
+    </form>
+
+    <h2>Subtract some numbers:</h2>
+    <form>
+        <input type="number" id="subFirstNumber" name="sub_first_number"></input>
+        -
+        <input type="number" id="subSecondNumber" name="sub_second_number"></input>
+        =
+        <div id="subtractionResult" class="result"></div>
+        <button onclick="subtraction();return false">Submit</button>
+    </form>
+
+    <h2>Multiply some numbers:</h2>
+    <form>
+        <input type="number" id="multiFirstNumber" name="multi_first_number"></input>
+        *
+        <input type="number" id="multiSecondNumber" name="multi_second_number"></input>
+        =
+        <div id="multiplicationResult" class="result"></div>
+        <button onclick="multiply();return false">Submit</button>
+    </form>
+
+    <h2>Divide some numbers:</h2>
+    <form>
+        <input type="number" id="divFirstNumber" name="div_first_number"></input>
+        /
+        <input type="number" id="divSecondNumber" name="div_second_number"></input>
+        =
+        <div id="divisionResult" class="result"></div>
+        <button onclick="divide();return false">Submit</button>
+    </form>
+
     <script src="app.js"></script>
 </body>
 </html>
