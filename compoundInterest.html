@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procent składany</title>
+    <style>
+        #calc {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div id="calc">
+        <label for="inCapital">Kapitał:</label>
+        <input type="number" name="inCapital" id="inCapital" value="1000"></input>
+
+        <label for="inRate">Oprocentowanie:</label>
+        <input type="number" name="inRate" id="inRate" value="0.04"></input>
+
+        <label for="inCapMonths">Kapitalizacja co ile miesięcy:</label>
+        <input type="number" name="inCapMonths" id="inCapMonths" value="12"></input>
+
+        <label for="inHowLongYears">Na ile lat lokata:</label>
+        <input type="number" name="inHowLongYears" id="inHowLongYears" value="5"></input>
+
+        <button id="btnCountIt">Oblicz</button>
+
+        <div id="result">_ _ _ _</div>
+    </div>
+    <script>
+        //capital * Math.pow( 1+(0.04/12), (12 * 5))
+
+        let capital = 1000;
+        let rate = 0.04;
+        let n = 12; //co ile kapitalizacja (12 - rok)
+        let t = 5; //na ile lat lokata
+
+        let finalMoney = capital * Math.pow(1+(rate/n), n*t);
+        console.log(Math.ceil(finalMoney));
+    </script>
+    
+</body>
+</html>
