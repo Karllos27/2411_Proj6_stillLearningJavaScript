@@ -156,3 +156,10 @@ function test4 (arg) {
 }
 
 test3 (12, test4);
+
+//Callback - wywolanie
+function buttonClicked(event) {
+    console.log("Przycisk kliknięty");
+}
+
+document.getElementById("button1").addEventListener("click", buttonClicked)
