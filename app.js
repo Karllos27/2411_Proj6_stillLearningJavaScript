@@ -160,6 +160,11 @@ test3 (12, test4);
 //Callback - wywolanie
 function buttonClicked(event) {
     console.log("Przycisk kliknięty");
+    console.log(event);
+
+    if(event.target.id == "button2") console.log("Button 2 jest kliknięty");
 }
 
-document.getElementById("button1").addEventListener("click", buttonClicked)
+document.getElementById("button1").addEventListener("click", buttonClicked);
+document.getElementById("button2").addEventListener("click", buttonClicked);
+
