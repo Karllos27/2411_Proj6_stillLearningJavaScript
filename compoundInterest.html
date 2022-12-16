@@ -13,6 +13,10 @@
             width: 450px;
         }
 
+        #result {
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
@@ -29,7 +33,7 @@
 
         <label for="inHowLongYears">Na ile lat lokata:</label>
         <input type="number" name="inHowLongYears" id="inHowLongYears" value="5"></input>
-
+        
         <button id="btnCountIt">Oblicz</button>
 
         <div id="result">_ _ _ _</div>
@@ -37,13 +41,26 @@
     <script>
         //capital * Math.pow( 1+(0.04/12), (12 * 5))
 
-        let capital = 1000;
-        let rate = 0.04;
-        let n = 12; //co ile kapitalizacja (12 - rok)
-        let t = 5; //na ile lat lokata
+        const inCapital = document.getElementById("inCapital");
+        const inRate = document.getElementById("inRate");
+        const inCapMonths = document.getElementById("inCapMonths"); //co ile kapitalizacja (12 - rok)
+        const inHowLongYears =  document.getElementById("inHowLongYears"); //na ile lat lokata
 
-        let finalMoney = capital * Math.pow(1+(rate/n), n*t);
-        console.log(Math.ceil(finalMoney));
+        const btnOblicz = document.getElementById("btnCountIt");
+        const txtResult = document.getElementById("result");
+
+        let finalMoney;
+
+        function countFinMoney(event) {
+            let capital = inCapital.value;
+            let rate = inRate.value;
+            let n = inCapMonths.value;
+            let t = inHowLongYears.value;
+
+            finalMoney = capital * Math.pow(1+(rate/n), n*t);
+            txtResult.innerHTML = Math.ceil(finalMoney);
+        }
+        btnOblicz.addEventListener("click", countFinMoney);
     </script>
     
 </body>
