@@ -168,3 +168,6 @@ function buttonClicked(event) {
 document.getElementById("button1").addEventListener("click", buttonClicked);
 document.getElementById("button2").addEventListener("click", buttonClicked);
 
+//inne
+
+console.log("  aAAA test    test    ".trim());

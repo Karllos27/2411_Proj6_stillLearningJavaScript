@@ -58,7 +58,7 @@
             let t = inHowLongYears.value;
 
             finalMoney = capital * Math.pow(1+(rate/n), n*t);
-            txtResult.innerHTML = Math.ceil(finalMoney);
+            txtResult.innerHTML = finalMoney.toFixed(2);
         }
         btnOblicz.addEventListener("click", countFinMoney);
     </script>
